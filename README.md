@@ -53,6 +53,7 @@ This will clear the whole stylesheet, leaving it empty without any rules.
 var stylesheet = new Stylesheet();
 
 stylesheet.addRule('.ninja', 'visibility: hidden;'); // Add a new rule
+stylesheet.addRule('.bear', 'color: white;'); // Add a second rule
 stylesheet.addRule('.bear', 'color: brown;', 0); // Add as first rule
 
 stylesheet.deleteRule('.ninja'); // Delete the .ninja rule
