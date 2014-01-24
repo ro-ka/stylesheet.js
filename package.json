@@ -1,0 +1,37 @@
+{
+  "name": "stylesheet.js",
+  "version": "1.0.0",
+  "description": "Generate and edit a dynamic Cascading Style Sheet using JavaScript.",
+  "homepage": "https://github.com/ro-ka/stylesheet.js",
+  "bugs": "https://github.com/ro-ka/stylesheet.js/issues",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ro-ka/stylesheet.js"
+  },
+  "keywords": [
+    "CSS",
+    "stylesheet"
+  ],
+  "author": {
+    "name": "Robert Katzki",
+    "email": "robert@katzki.de",
+    "url": "http://katzki.de"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-uglify": "~0.3.2",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-mocha": "~0.4.10",
+    "load-grunt-tasks": "~0.2.1",
+    "time-grunt": "~0.2.8",
+    "jshint-stylish": "~0.1.5",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-compress": "~0.6.0"
+  }
+}
