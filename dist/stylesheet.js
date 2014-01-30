@@ -53,7 +53,7 @@
       throw new Error('selector should be a string!');
     }
 
-    var rules = this.sheet.rules,
+    var rules = this.sheet.cssRules,
       i = rules.length - 1;
 
     for (i; i >= 0; i--) {
@@ -67,7 +67,7 @@
    * Clear the stylesheet and delete all rules
    */
   Stylesheet.prototype.clear = function() {
-    for (var i = this.sheet.rules.length - 1; i >= 0; i--) {
+    for (var i = this.sheet.cssRules.length - 1; i >= 0; i--) {
       this.sheet.deleteRule(i);
     }
   };

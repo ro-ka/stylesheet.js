@@ -1,6 +1,6 @@
 {
   "name": "stylesheet.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Generate and edit a dynamic Cascading Style Sheet using JavaScript.",
   "homepage": "https://github.com/ro-ka/stylesheet.js",
   "bugs": "https://github.com/ro-ka/stylesheet.js/issues",
