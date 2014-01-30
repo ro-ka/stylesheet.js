@@ -29,7 +29,7 @@ describe('Stylesheet', function() {
     });
 
     it('creates an empty CSSStyleSheet', function() {
-      expect(stylesheet.sheet.rules.length).to.equal(0);
+      expect(stylesheet.sheet.cssRules.length).to.equal(0);
     });
 
     it('has an internal reference to the created CSSStyleSheet', function() {
@@ -45,7 +45,7 @@ describe('Stylesheet', function() {
     it('adds a new rule to the stylesheet', function() {
       stylesheet.addRule('.ninja', 'visibility: hidden;');
 
-      expect(stylesheet.sheet.rules.length).to.equal(1);
+      expect(stylesheet.sheet.cssRules.length).to.equal(1);
     });
 
     it('throws an error when no selector is passed in', function() {
@@ -101,7 +101,7 @@ describe('Stylesheet', function() {
       stylesheet.addRule('.bear', 'color: brown;');
       stylesheet.deleteRule('.ninja');
 
-      expect(stylesheet.sheet.rules.length).to.equal(1);
+      expect(stylesheet.sheet.cssRules.length).to.equal(1);
     });
 
     it('throws an error when no selector is passed in', function() {
@@ -133,7 +133,7 @@ describe('Stylesheet', function() {
       stylesheet.addRule('.bear', 'color: brown;');
       stylesheet.clear();
 
-      expect(stylesheet.sheet.rules.length).to.equal(0);
+      expect(stylesheet.sheet.cssRules.length).to.equal(0);
     });
   });
 });
