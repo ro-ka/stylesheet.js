@@ -32,12 +32,25 @@ module.exports = function(grunt) {
       }
     },
     clean: ['dist'],
-    copy: {
-      dist: {
-        expand: true,
-        cwd: 'lib/',
-        src: '*.js',
-        dest: 'dist/'
+    transpile: {
+      amd: {
+        type: "amd",
+        files: [{
+          expand: true,
+          cwd: 'lib/',
+          src: ['**/*.js'],
+          dest: 'dist/',
+          ext: '.amd.js'
+        }]
+      },
+      globals: {
+        type: "globals",
+        files: [{
+          expand: true,
+          cwd: 'lib/',
+          src: ['**/*.js'],
+          dest: 'dist/',
+        }]
       }
     },
     uglify: {
@@ -70,7 +83,8 @@ module.exports = function(grunt) {
   // Build dist
   grunt.registerTask('build', [
     'clean',
-    'copy:dist',
+    'transpile:globals',
+    'transpile:amd',
     'uglify',
     'compress'
   ]);
