@@ -1,0 +1,4 @@
+dist
+test
+.travis.yml
+bower.json
