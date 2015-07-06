@@ -62,10 +62,7 @@ stylesheet.clear(); // Clear all rules
 ```
 
 ## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
-
-## Release History
-1.0.0 Initial release
+In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality.
 
 ## License
 Copyright (c) 2014 Robert Katzki. Licensed under the MIT license.

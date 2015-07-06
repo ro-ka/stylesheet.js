@@ -8,7 +8,12 @@
   "scripts": {
     "lint": "eslint ./lib ./test/*-test.js",
     "pretest": "npm run lint",
-    "test": "grunt test"
+    "test": "mocha-phantomjs ./test/index.html",
+    "clean": "rm -rf ./dist/*",
+    "copy": "cp ./lib/*.js ./dist/",
+    "uglify": "uglify -s ./dist/stylesheet.js -o ./dist/stylesheet.min.js",
+    "compress": "gzip --force --keep ./dist/stylesheet.min.js",
+    "build": "npm run clean && npm run copy && npm run uglify && npm run compress"
   },
   "repository": {
     "type": "git",
@@ -27,13 +32,8 @@
   "dependencies": {},
   "devDependencies": {
     "eslint": "^0.24.0",
-    "grunt": "~0.4.2",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-compress": "~0.6.0",
-    "grunt-contrib-copy": "~0.5.0",
-    "grunt-contrib-uglify": "~0.3.2",
-    "grunt-mocha": "~0.4.10",
-    "load-grunt-tasks": "~0.2.1",
-    "time-grunt": "~0.2.8"
+    "mocha-phantomjs": "^3.5.3",
+    "phantomjs": "^1.9.17",
+    "uglify": "^0.1.5"
   }
 }
