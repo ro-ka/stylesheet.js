@@ -19,7 +19,7 @@ describe('Stylesheet', function() {
     it('adds a new element to the page', function() {
       var style = document.getElementsByTagName('style')[0];
 
-      expect(style).to.exist();
+      expect(style).to.exist; // eslint-disable-line no-unused-expressions
     });
 
     it('adds a new element to the document.styleSheets', function() {
