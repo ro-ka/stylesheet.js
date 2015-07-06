@@ -1,4 +1,5 @@
-(function(exports) {
+(function(__exports__) {
+  "use strict";
   /**
    * Create a new stylesheet
    */
@@ -16,7 +17,6 @@
 
     this.sheet = document.styleSheets[document.styleSheets.length - 1];
   }
-  exports.Stylesheet = Stylesheet;
 
   /**
    * Add A rule to the stylesheet
@@ -71,4 +71,6 @@
       this.sheet.deleteRule(i);
     }
   };
-})(this);
+
+  __exports__.Stylesheet = Stylesheet;
+})(window);
