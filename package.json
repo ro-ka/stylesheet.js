@@ -13,7 +13,13 @@
     "copy": "cp ./lib/*.js ./dist/",
     "uglify": "uglify -s ./dist/stylesheet.js -o ./dist/stylesheet.min.js",
     "compress": "gzip --force --keep ./dist/stylesheet.min.js",
-    "build": "npm run clean && npm run copy && npm run uglify && npm run compress"
+    "build": "npm run clean && npm run copy && npm run uglify && npm run compress",
+    "changelog": "conventional-changelog-generator && atom -w CHANGELOG.md",
+    "release": "echo 'Usage: npm run release:patch|minor|major'",
+    "release:patch": "bumpery --verify='npm test' --no-push --no-commit --no-createTag --versionType patch && npm run changelog && npm run release:commit",
+    "release:minor": "bumpery --verify='npm test' --no-push --no-commit --no-createTag --versionType minor && npm run changelog && npm run release:commit",
+    "release:major": "bumpery --verify='npm test' --no-push --no-commit --no-createTag --versionType major && npm run changelog && npm run release:commit",
+    "release:commit": "bumpery --commitFiles 'CHANGELOG.md package.json' --commitMessage 'chore(release): version %VERSION%' --no-bumpVersion"
   },
   "repository": {
     "type": "git",
@@ -31,6 +37,8 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "bumpery": "^1.0.7",
+    "conventional-changelog-generator": "0.0.3",
     "eslint": "^0.24.0",
     "mocha-phantomjs": "^3.5.3",
     "phantomjs": "^1.9.17",
