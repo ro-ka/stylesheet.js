@@ -1,7 +1,8 @@
 {
   "env": {
     "browser": true,
-    "mocha": true
+    "mocha": true,
+    "node": true
   },
   "globals": {
 
