@@ -1,5 +1,7 @@
 /* global chai, beforeEach, describe, it, Stylesheet, CSSStyleSheet */
 
+/* eslint-disable max-nested-callbacks */
+
 var expect = chai.expect;
 
 describe('Stylesheet', function() {
@@ -17,12 +19,12 @@ describe('Stylesheet', function() {
     it('adds a new element to the page', function() {
       var style = document.getElementsByTagName('style')[0];
 
-      expect(style).to.exist;
+      expect(style).to.exist();
     });
 
     it('adds a new element to the document.styleSheets', function() {
       var stylesBefore = document.styleSheets.length,
-        newStylesheet = new Stylesheet(),
+        newStylesheet = new Stylesheet(), // eslint-disable-line
         stylesAfter = document.styleSheets.length;
 
       expect(stylesAfter).to.equal(stylesBefore + 1);

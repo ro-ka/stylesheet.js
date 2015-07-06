@@ -4,7 +4,10 @@
   "description": "Generate and edit a dynamic Cascading Style Sheet using JavaScript.",
   "homepage": "https://github.com/ro-ka/stylesheet.js",
   "bugs": "https://github.com/ro-ka/stylesheet.js/issues",
+  "main": "./lib/stylesheet.js",
   "scripts": {
+    "lint": "eslint ./lib ./test/*-test.js",
+    "pretest": "npm run lint",
     "test": "grunt test"
   },
   "repository": {
@@ -23,15 +26,14 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "eslint": "^0.24.0",
     "grunt": "~0.4.2",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-compress": "~0.6.0",
+    "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-uglify": "~0.3.2",
-    "grunt-contrib-jshint": "~0.8.0",
     "grunt-mocha": "~0.4.10",
     "load-grunt-tasks": "~0.2.1",
-    "time-grunt": "~0.2.8",
-    "jshint-stylish": "~0.1.5",
-    "grunt-contrib-copy": "~0.5.0",
-    "grunt-contrib-clean": "~0.5.0",
-    "grunt-contrib-compress": "~0.6.0"
+    "time-grunt": "~0.2.8"
   }
 }

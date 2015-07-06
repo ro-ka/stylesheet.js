@@ -14,13 +14,6 @@ module.exports = function(grunt) {
       '* Copyright (c) <%= grunt.template.today("yyyy") %> ' +
       '<%= pkg.author.name %>;' +
       ' Licensed <%= pkg.license %> */\n',
-    // Task configuration
-    jshint: {
-      options: {
-        reporter: require('jshint-stylish')
-      },
-      target: ['lib/*.js', 'test/*.js']
-    },
     mocha: {
       test: {
         src: ['test/*.html'],
@@ -76,7 +69,6 @@ module.exports = function(grunt) {
   ]);
 
   grunt.registerTask('default', [
-    'jshint',
     'test',
     'build'
   ]);
