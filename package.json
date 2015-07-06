@@ -11,7 +11,7 @@
     "test": "mocha-phantomjs ./test/index.html",
     "clean": "rm -rf ./dist/*",
     "copy": "cp ./lib/*.js ./dist/",
-    "uglify": "uglify -s ./dist/stylesheet.js -o ./dist/stylesheet.min.js",
+    "uglify": "uglifyjs ./dist/stylesheet.js --compress --mangle  -o ./dist/stylesheet.min.js",
     "compress": "gzip --force --keep ./dist/stylesheet.min.js",
     "build": "npm run clean && npm run copy && npm run uglify && npm run compress",
     "changelog": "conventional-changelog-generator && atom -w CHANGELOG.md",
@@ -42,6 +42,6 @@
     "eslint": "^0.24.0",
     "mocha-phantomjs": "^3.5.3",
     "phantomjs": "^1.9.17",
-    "uglify": "^0.1.5"
+    "uglify-js": "^2.4.23"
   }
 }
