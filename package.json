@@ -19,7 +19,7 @@
     "release:patch": "bumpery --verify='npm test' --no-push --no-commit --no-createTag --versionType patch && npm run changelog && npm run release:commit",
     "release:minor": "bumpery --verify='npm test' --no-push --no-commit --no-createTag --versionType minor && npm run changelog && npm run release:commit",
     "release:major": "bumpery --verify='npm test' --no-push --no-commit --no-createTag --versionType major && npm run changelog && npm run release:commit",
-    "release:commit": "bumpery --commitFiles 'CHANGELOG.md package.json' --commitMessage 'chore(release): version %VERSION%' --no-bumpVersion"
+    "release:commit": "bumpery --commitFiles 'CHANGELOG.md package.json' --commitMessage 'chore(release): version %VERSION%' --no-bumpVersion && npm publish"
   },
   "repository": {
     "type": "git",
