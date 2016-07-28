@@ -40,8 +40,8 @@
     "bumpery": "^1.0.7",
     "conventional-changelog-generator": "0.0.3",
     "eslint": "^0.24.0",
-    "mocha-phantomjs": "^3.5.3",
-    "phantomjs": "^1.9.17",
+    "mocha-phantomjs": "^4.1.0",
+    "phantomjs-prebuilt": "^2.1.7",
     "uglify-js": "^2.4.23"
   }
 }
