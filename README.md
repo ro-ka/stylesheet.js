@@ -3,6 +3,23 @@
 Generate and edit a dynamic Cascading Style Sheet using JavaScript.
 
 ## Getting Started
+
+### npm
+
+Install the script via [npm](https://www.npmjs.com/):
+
+```
+npm install stylesheet.js --save
+```
+
+Require it in your app:
+
+```js
+var Stylesheet = require('stylesheet.js');
+```
+
+### Bower
+
 Install the script via [bower](http://bower.io/):
 
 ```
